@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LoL CounterForge</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+    <!-- =========================================
+     INTRO SCREEN
+========================================= -->
+
+<div id="introScreen" class="intro-screen">
+
+    <div class="intro-background"></div>
+
+    <div class="intro-content">
+
+        <div class="intro-logo">
+
+            <svg viewBox="0 0 100 100">
+
+                <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    class="intro-ring"
+                />
+
+                <path
+                    d="M50 18 L82 50 L50 82 L18 50 Z"
+                    class="intro-diamond"
+                />
+
+                <path
+                    d="M65 34
+                       C58 27 46 24 36 30
+                       C24 37 21 53 28 65
+                       C35 77 51 80 63 73"
+                    class="intro-c"
+                />
+
+                <path
+                    d="M58 22 L76 40 L43 73 L34 75 L36 66 Z"
+                    class="intro-blade"
+                />
+
+                <path
+                    d="M43 73 L76 40"
+                    class="intro-blade-line"
+                />
+
+            </svg>
+
+        </div>
+
+
+        <div class="intro-name">
+
+            <span>LOL</span>
+
+            <strong>COUNTERFORGE</strong>
+
+        </div>
+
+
+        <p class="intro-subtitle">
+            CHAMPION MATCHUP DATABASE
+        </p>
+
+
+        <div class="intro-loader">
+
+            <div class="intro-loader-bar"></div>
+
+        </div>
+
+
+        <div
+            id="introStatus"
+            class="intro-status">
+
+            INITIALIZING DATABASE...
+
+        </div>
+
+    </div>
+
+</div>
+
+<<header>
+
+    <div class="brand">
+
+        <div class="custom-logo">
+
+            <svg
+                viewBox="0 0 100 100"
+                class="logo-svg"
+                aria-label="LoL CounterForge logo"
+            >
+
+                <!-- Outer ring -->
+                <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    class="logo-ring"
+                />
+
+                <!-- Inner diamond -->
+                <path
+                    d="M50 18 L82 50 L50 82 L18 50 Z"
+                    class="logo-diamond"
+                />
+
+                <!-- C -->
+                <path
+                    d="M65 34
+                       C58 27 46 24 36 30
+                       C24 37 21 53 28 65
+                       C35 77 51 80 63 73"
+                    class="logo-c"
+                />
+
+                <!-- Forge blade -->
+                <path
+                    d="M58 22 L76 40 L43 73 L34 75 L36 66 Z"
+                    class="logo-blade"
+                />
+
+                <!-- Blade center -->
+                <path
+                    d="M43 73 L76 40"
+                    class="logo-blade-line"
+                />
+
+            </svg>
+
+        </div>
+
+        <div class="brand-text">
+
+            <strong>LOL</strong>
+
+            <span>COUNTERFORGE</span>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#home"
+           data-en="HOME"
+           data-ko="홈">
+            HOME
+        </a>
+
+        <a href="#counters"
+           data-en="CHAMPIONS"
+           data-ko="챔피언">
+            CHAMPIONS
+        </a>
+
+        <a href="#about"
+           data-en="ABOUT"
+           data-ko="정보">
+            ABOUT
+        </a>
+
+        <button
+            id="languageButton"
+            class="language-button">
+
+            <span id="languageText">
+                ENG
+            </span>
+
+        </button>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <p
+            class="small-title"
+            data-en="LEAGUE OF LEGENDS"
+            data-ko="리그 오브 레전드"
+        >
+            LEAGUE OF LEGENDS
+        </p>
+
+
+        <h1>
+
+            <span
+                data-en="KNOW"
+                data-ko="상대를"
+            >
+                KNOW
+            </span>
+
+            <br>
+
+            <span
+                class="highlight"
+                data-en="YOUR COUNTER."
+                data-ko="파악하라."
+            >
+                YOUR COUNTER.
+            </span>
+
+        </h1>
+
+
+        <p
+            class="description"
+            data-en="Find counters, discover favorable matchups, and understand what makes every champion strong."
+            data-ko="카운터를 찾고, 유리한 상성을 확인하며, 각 챔피언의 강점을 알아보세요."
+        >
+            Find counters, discover favorable matchups,
+            and understand what makes every champion strong.
+        </p>
+
+
+        <a
+            href="#counters"
+            class="main-button"
+            data-en="EXPLORE CHAMPIONS"
+            data-ko="챔피언 찾기"
+        >
+            EXPLORE CHAMPIONS
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CHAMPIONS
+========================= -->
+
+<section
+    id="counters"
+    class="counter-section"
+>
+
+    <div class="section-title">
+
+        <p
+            data-en="CHAMPION DATABASE"
+            data-ko="챔피언 데이터베이스"
+        >
+            CHAMPION DATABASE
+        </p>
+
+
+        <h2
+            data-en="Find Your Matchup"
+            data-ko="상성 찾기"
+        >
+            Find Your Matchup
+        </h2>
+
+    </div>
+
+
+    <div class="search-container">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search champion..."
+        >
+
+    </div>
+
+
+    <div
+        id="championList"
+        class="champion-list"
+    ></div>
+
+
+    <!-- MATCHUP WINDOW -->
+
+    <div
+        id="matchup"
+        class="matchup hidden"
+    >
+
+        <button
+            id="closeMatchup"
+            class="close-button"
+        >
+            ×
+        </button>
+
+
+        <div id="matchupContent"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    id="about"
+    class="about"
+>
+
+    <p
+        data-en="ABOUT"
+        data-ko="정보"
+    >
+        ABOUT
+    </p>
+
+
+    <h2>
+        CounterForge
+    </h2>
+
+
+    <p
+        data-en="A fan-made League of Legends matchup database designed to help players understand champion strengths and weaknesses."
+        data-ko="플레이어가 챔피언의 강점과 약점을 이해할 수 있도록 만든 팬 제작 리그 오브 레전드 상성 데이터베이스입니다."
+    >
+        A fan-made League of Legends matchup database
+        designed to help players understand champion
+        strengths and weaknesses.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>
+        CounterForge
+    </p>
+
+    <p
+        data-en="Not affiliated with Riot Games."
+        data-ko="Riot Games와 관련이 없는 팬 제작 사이트입니다."
+    >
+        Not affiliated with Riot Games.
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+
+</html>
+
