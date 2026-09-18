@@ -2961,35 +2961,245 @@ footer p:first-child {
 /* =========================================
    MOBILE INTRO
 ========================================= */
+/* =========================================
+   MOBILE INTRO
+========================================= */
 
 @media (max-width: 600px) {
 
     .intro-logo {
-
-        width:
-            105px;
-
-        height:
-            105px;
+        width: 105px;
+        height: 105px;
     }
-
 
     .intro-name strong {
-
-        font-size:
-            25px;
-
-        letter-spacing:
-            3px;
+        font-size: 25px;
+        letter-spacing: 3px;
     }
 
-
     .intro-name span {
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+}
 
-        font-size:
-            14px;
 
-        letter-spacing:
-            5px;
+/* =========================================
+   DESCRIPTION CONTAINER
+========================================= */
+
+.description-container {
+    max-width: 650px;
+}
+
+
+/* =========================================
+   CHAMPION DESCRIPTION
+========================================= */
+
+.champion-description {
+    max-width: 650px;
+    color: #7f8c9b;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+
+    overflow: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        max-height 0.35s ease;
+}
+
+
+/* =========================================
+   EXPANDED DESCRIPTION
+========================================= */
+
+.champion-description.expanded {
+    display: block;
+
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   DESCRIPTION EXPAND BUTTON
+========================================= */
+
+.description-toggle {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 12px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+
+    color: var(--cyan);
+
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* =========================================
+   CIRCLE ARROW
+========================================= */
+
+.description-toggle::before {
+    content: "↓";
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    border: 1px solid rgba(53, 208, 230, 0.35);
+    border-radius: 50%;
+
+    color: var(--cyan);
+
+    font-size: 11px;
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
+
+.description-toggle::after {
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    background: rgba(53, 208, 230, 0.25);
+
+    transition:
+        width 0.25s ease,
+        background 0.2s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.description-toggle:hover {
+    color: #ffffff;
+    gap: 12px;
+}
+
+.description-toggle:hover::before {
+    color: #ffffff;
+
+    border-color: var(--cyan);
+
+    background:
+        rgba(53, 208, 230, 0.08);
+
+    box-shadow:
+        0 0 12px rgba(53, 208, 230, 0.08);
+}
+
+.description-toggle:hover::after {
+    width: 38px;
+
+    background:
+        rgba(53, 208, 230, 0.5);
+}
+
+
+/* =========================================
+   ACTIVE / CLICK
+========================================= */
+
+.description-toggle:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   EXPANDED STATE
+========================================= */
+
+.description-toggle.expanded::before {
+    content: "↑";
+}
+
+.description-toggle.expanded::after {
+    width: 38px;
+}
+
+
+/* =========================================
+   MOBILE DESCRIPTION
+========================================= */
+
+@media (max-width: 700px) {
+
+    .description-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .champion-description {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .description-toggle {
+        margin-top: 14px;
+        font-size: 9px;
+        letter-spacing: 1.3px;
+    }
+
+    .description-toggle::before {
+        width: 17px;
+        height: 17px;
+        font-size: 10px;
+    }
+
+    .description-toggle::after {
+        width: 24px;
+    }
+
+    .description-toggle:hover::after,
+    .description-toggle.expanded::after {
+        width: 32px;
     }
 }
