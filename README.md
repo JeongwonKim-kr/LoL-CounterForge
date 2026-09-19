@@ -24,6 +24,8 @@ Champion information and artwork are loaded using Riot Games' Data Dragon servic
 - JavaScript
 - Riot Games Data Dragon API
 
+Link: https://jeongwonkim-kr.github.io/LoL-CounterForge/#counters
+
 ## Project Structure
 
 ```text
@@ -32,3 +34,5 @@ CounterForge/
 ├── style.css
 ├── script.js
 └── README.md
+```
+Link: https://jeongwonkim-kr.github.io/LoL-CounterForge/#counters
